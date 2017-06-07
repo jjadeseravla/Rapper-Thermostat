@@ -28,6 +28,12 @@ describe("Thermostat", function(){
     expect(thermostat.inPowerSaveMode()).toBeTruthy();
   });
 
+  it('resets temperature to default value', function(){
+    thermostat.up(5)
+    thermostat.resetTemperature();
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  });
+
 describe('if power save mode is on', function(){
   it('has a maximum temperature of 25', function(){
     expect(function(){ thermostat.up(10); }).toThrowError('Maximum temperature of 25 reached for Power Saving Mode');
