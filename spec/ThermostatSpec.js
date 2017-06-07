@@ -19,9 +19,13 @@ describe("Thermostat", function(){
     expect(thermostat.getCurrentTemperature()).toEqual(19);
   });
 
-  it('decreases the temperature by 1', function(){  
+  it('decreases the temperature by 1', function(){
     expect(function(){ thermostat.down(15); }).toThrowError('Minimum of ' + thermostat.MINIMUM_TEMPERATURE + ' degree reached. Temp set to min.');
     expect(thermostat.getCurrentTemperature()).toEqual(thermostat.MINIMUM_TEMPERATURE);
+  });
+
+  it('has power save mode on by default', function(){
+    expect(thermostat.inPowerSaveMode()).toBeTruthy();
   });
 
 });
