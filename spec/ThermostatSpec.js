@@ -28,4 +28,18 @@ describe("Thermostat", function(){
     expect(thermostat.inPowerSaveMode()).toBeTruthy();
   });
 
+describe('if power save mode is on', function(){
+  it('has a maximum temperature of 25', function(){
+    expect(function(){ thermostat.up(10); }).toThrowError('Maximum temperature of 25 reached for Power Saving Mode');
+    expect(thermostat.getCurrentTemperature()).toEqual(25);
+  });
+});
+
+describe('if power save mode is off', function(){
+  it('has a maximum temperature of 32', function(){
+    thermostat.changePowerMode();
+    expect(function(){ thermostat.up(15); }).toThrowError('Maximum temperature of 32 reached');
+    expect(thermostat.getCurrentTemperature()).toEqual(32);
+  });
+});
 });
