@@ -9,4 +9,8 @@ describe("Thermostat", function(){
   it("returns the starting temperature", function(){
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
+  it('increases the temperature by 1', function(){
+    thermostat.up(1)
+    expect(thermostat.getCurrentTemperature()).toEqual(21);
+  });
 });
