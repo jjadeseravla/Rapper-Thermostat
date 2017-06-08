@@ -3,10 +3,11 @@
   <head>
     <center>
     <title>Thermostat Control</title>
+    <link rel='stylesheet' href='style.css'>
   </head>
   <body>
+
     <section>
-    <!-- <script src="http://jquery.com/"></script> -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <script src="./interface.js"></script>
@@ -20,12 +21,6 @@
           <input id='current-city' type="text" placeholder="Enter a city"></input>
           <input type="submit" value="Go!"></input>
         </form>
-        <!-- <select id='current-city'>
-          <option value="london">London</option>
-          <option value="newyork">New York</option>
-          <option value="paris">Paris</option>
-          <option value="tokyo">Tokyo</option>
-        </select> -->
       </section>
 
       <h1 id='current_temp'></h1>
@@ -37,11 +32,23 @@
       power saving mode is <p id="power-saving-status">On</p>
       <button id='powersaving-on'>PSM on/off</button>
       <!-- <button id='status'>status</button> -->
+<div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- <h2>Sound Information</h2>
+      <div id="length">Duration:</div>
+      <div id="source">Source:</div>
+      <div id="status" style="color:red;">Status: Loading</div> -->
 
+      <!-- <h2>Playing Information</h2>
+      <div id="currentTime">0</div> -->
+</div>
     </section>
-  </center>
   </body>
-  <footer>
-
-  </footer>
+  <!-- <footer>
+    <h2>Control Buttons</h2>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="restart">Restart</button>
+  </footer> -->
+</center>
 </html>
