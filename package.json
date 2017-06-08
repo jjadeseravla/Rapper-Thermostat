@@ -19,5 +19,8 @@
   "devDependencies": {
     "jasmine": "^2.6.0",
     "jasmine-spec-reporter": "^4.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }
