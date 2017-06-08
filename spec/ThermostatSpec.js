@@ -1,6 +1,6 @@
 describe("Thermostat", function(){
   var thermostat;
-  var Thermostat = require('../lib/Thermostat');
+  // var Thermostat = require('../lib/Thermostat');
 
   beforeEach(function(){
     thermostat = new Thermostat();

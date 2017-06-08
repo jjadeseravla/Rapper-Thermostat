@@ -20,10 +20,11 @@ In Week 5 we are building a simple JavaScript thermostat using Test-Driven Devel
 - If power saving mode is off, the maximum temperature is 32 degrees
 - Power saving mode is on by default
 - You can reset the temperature to 20 with a reset function
-- You can ask about the thermostat's current energy usage: 
+- You can ask about the thermostat's current energy usage:
 < 18 is low-usage, < - 25 is medium-usage, anything else is high-usage.
 
 ## Contributors
 
 - Dom McDonnell [@dmcd84](https://github.com/dmcd84)
 - Mario Ribeiro [@marioribeiro](https://github.com/marioribeiro)
+- Jade Alvares [@jjadeseravla](https://github.com/jjadeseravla)
