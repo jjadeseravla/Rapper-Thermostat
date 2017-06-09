@@ -1,19 +1,24 @@
-require 'sinatra/base'
+require 'sinatra'
 require 'json'
-require 'sinatra/cross_origin'
-
-class Thermostat < Sinatra::base
+#
+class Thermostat < Sinatra::Base
+set :public_folder, proc { File.join(root) }
 
   before do
-    headers "Access-Control-Allow-Origin" => "*"
+    headers 'Access-Control-Allow-Origin' => '*'
   end
 
   get '/temperature' do
-    JSON.parse(File.open("userThermostat.json", "r"))
+    File.open('userThermostat.json', 'r') do |data|
+      p data
+    end
   end
 
   post '/temperature' do
-    File.open("userThermostat.json", "w").to_json
-    redirect '/temperature'
+    File.open('userThermostat.json', 'w') do |data|
+      data.write params[:temperature].to_json
+    # {temperature = [params :temperature]}.to_json
   end
+end
+
 end
