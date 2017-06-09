@@ -9,3 +9,35 @@
 .high-usage {
   color: red;
 }
+
+h1 {
+  font-family: Arial;
+}
+
+body {
+  background-color: #fbc6c2; /* Red */
+  /*background-image: url(http://assets1.smoothradio.com/2013/30/weather-1375260252-hero-wide-1.jpg);*/
+}
+
+.alert {
+    padding: 40px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 10px;
+    visibility: hidden;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 80px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
